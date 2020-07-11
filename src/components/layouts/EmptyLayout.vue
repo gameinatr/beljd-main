@@ -1,5 +1,12 @@
 <template>
-  <div class="cd"><router-view /></div>
+  <div class="cd">
+      <div class="top-bar">
+          <div class="img-wrapper">
+             <img src="../../assets/images/rwlogo.png"/>
+          </div>
+      </div>
+    <router-view />
+  </div>
 
   <!--   
         <div class=".container-fluid">
@@ -11,8 +18,3 @@
 <script>
 export default {};
 </script>
-<style>
-body {
-  background-color: rgb(177, 169, 169) !important;
-}
-</style>

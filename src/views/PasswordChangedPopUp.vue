@@ -69,15 +69,3 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.input {
-    width: 300px;
-}
-.center{
-  height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10%;
-}
-</style>

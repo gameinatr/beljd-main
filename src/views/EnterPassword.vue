@@ -25,18 +25,3 @@
 </b-card>  
   </div>
 </template>
-
-<script>
-
-</script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.center{
-  height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10%;
-}
-
-</style>

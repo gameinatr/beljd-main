@@ -1,7 +1,7 @@
 <template>
-  <div class="container mt-50">
+  <div class="center">
     <div class="row">
-      <div class="col-sm-6 mx-auto">
+      <div class="col-sm-12 mx-auto">
         <form @submit.prevent="submitHandler">
           <div class="form-group ">
             <label for="exampleInputEmail1">введите ваш email</label>
@@ -112,14 +112,3 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.container {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-}
-
-.btn btn-primary {
-  margin-bottom: 10px;
-}
-</style>

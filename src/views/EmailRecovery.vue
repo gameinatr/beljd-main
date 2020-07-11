@@ -15,7 +15,11 @@
                 >
                 </b-form-input>
             </b-form-group>
-            <b-button type="submit" v-on:click="sendEmail">Отправить e-mail</b-button>
+            <b-button type="submit btn btn-primary" v-on:click="sendEmail">Отправить e-mail</b-button>
+            <b-button type="btn btn-secondary"> <router-link to="/passwordchangedpopup">
+              Изменить пароль
+            </router-link>
+            </b-button>
             <router-view/>
         </b-form>
         <div v-if="sent" class="success">
@@ -40,16 +44,3 @@
 }
 };
 </script>
-
-<style scoped>
-    input {
-    width: 500px;
-}
-    .center{
-    height: 10em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10%;
-}
-</style>

@@ -31,9 +31,7 @@ return (this.$route.meta.layout || 'empty') + '-layout'
   }
 };
 </script>
-
 <style>
-#app{
-  width: 100%;
-}
+  @import '../src/assets/css/styles.css';
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700');
 </style>
