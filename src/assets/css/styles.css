@@ -2,6 +2,9 @@
 a:hover{
 	text-decoration:none;
 }
+ul{
+    list-style:none;
+}
 /*==================CUSTOM RESETS END=======*/
 
 #app{
@@ -41,102 +44,83 @@ input {
 .top-bar .img-wrapper img {
 	height:100%;
 }
-/*=========================SIDEBAR STYLES SECTION====================*/
-.sidebar{ width:220px;  background-color:rgb(175, 170, 170);transition: all 0.5s  ease-in-out; height:100vh}
-.bg-defoult{background-color:rgb(175, 170, 170);}
-.sidebar ul{ list-style:none; margin:0px; padding:0px; }
-.sidebar li a,.sidebar li a.collapsed.active{ display:block; padding:8px 12px; color:#fff;border-left:0px solid #dedede;  text-decoration:none}
-.sidebar li a.active{background-color: rgb(175, 170, 170);border-left:5px solid #dedede; transition: all 0.5s  ease-in-out}
-.sidebar li a:hover{background-color:#000 !important;}
-.sidebar li a i{ padding-right:5px;}
-.sidebar ul li .sub-menu li a{ position:relative}
-.sidebar ul li .sub-menu li a:before{
-    font-family: FontAwesome;
-    content: "\f105";
-    display: inline-block;
-    padding-left: 0px;
-    padding-right: 10px;
-    vertical-align: middle;
-}
-.sidebar ul li .sub-menu li a:hover:after {
-    content: "";
-    position: absolute;
-    left: -5px;
-    top: 0;
-    width: 5px;
-    background-color: #111;
-    height: 100%;
-}
-.sidebar ul li .sub-menu li a:hover{ background-color:#222; padding-left:20px; transition: all 0.5s  ease-in-out}
-.sub-menu{ border-left:5px solid #dedede;}
-	.sidebar li a .nav-label,.sidebar li a .nav-label+span{ transition: all 0.5s  ease-in-out; margin-top: 20px;}
-	
-
-	.sidebar.fliph li a .nav-label,.sidebar.fliph li a .nav-label+span{ display:none;transition: all 0.5s  ease-in-out}
-	.sidebar.fliph {
-    width: 42px;transition: all 0.5s  ease-in-out;
-   
-}
-	
-.sidebar.fliph li{ position:relative}
-.sidebar.fliph .sub-menu {
-    position: absolute;
-    left: 39px;
-    top: 0;
-    background-color: #222;
-    width: 150px;
-    z-index: 100;
-}
-	
-
-	.user-panel {
-    clear: left;
-    display: block;
-    float: left;
-    
-}
-.user-panel>.image>img {
-    width: 100%;
-    max-width: 45px;
-    height: auto;
-}
-.user-panel>.info,  .user-panel>.info>a {
-    color: #fff;
-    margin-bottom: 20px;
-}
-.user-panel>.info>p {
-    font-weight: 600;
-    margin-bottom: 9px;
+/*=====================HEADER SECTION STYLES=================*/
+header {
+    display: flex;
+    max-height: 50px;
 }
 .user-panel {
-    clear: left;
-    display: block;
-    float: left;
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 25px 15px;
-    border-bottom: 1px solid;
+    flex-basis: 40%;
+    padding: 0 20px;
+    display:flex;
 }
-.user-panel>.info {
-    padding: 5px 5px 5px 15px;
-    line-height: 1;
-    position: absolute;
-    left: 55px;
-}
-
-.fliph .user-panel{ display: none; }
-
-#online{
-   margin-bottom: 20px;
-}
-/*=====================MAIN SECTION STYLES===================*/
-.main {
+.user-info {
     display: flex;
+    padding: 0 10px;
+    align-items: center;
 }
-aside.menu-sidebar {
-    max-width: 15%;
+.user-info p{
+    color:white;
+    font-weight:bold;
+    margin:0;
 }
+.user-info span:last-child {
+    text-transform: capitalize;
+}
+.userpic img {
+    height: 50px;
+    border-radius: 50%;
+    padding:2px 0;
+}
+nav.main-menu {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+}
+.main-menu ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    max-height: 50px;
+}
+.main-menu ul li {
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+}
+.main-menu ul li:hover {
+    background: #d4d4d4;
+}
+.main-menu ul li a {
+    padding: 15px;
+    width: 100%;
+    color:white;
+    font-weight:bold;
+}
+.main-menu ul li a:hover{
+    color:black;
+}
+li.has-dropdown {
+    position: relative;
+}
+li.has-dropdown:hover ul.dropdown{
+    display:block;
+}
+ul.dropdown {
+    position: absolute;
+    top:100%;
+    display: none;
+    padding:0;
+    margin: 0;
+    background: #b1a9a9;
+    height:auto;
+    max-height:none;
+}
+
+/*=====================MAIN SECTION STYLES===================*/
 .content {
     background: white;
     width: 100%;
+    padding: 0 5%;
 }
