@@ -78,7 +78,10 @@ export default {
   data: () => ({
     email: "",
     password: "",
-  }),
+    
+  }
+  
+  ),
   validations: {
     email: { email, required },
     password: { required, minLength: minLength(6) },

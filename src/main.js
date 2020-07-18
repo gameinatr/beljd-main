@@ -6,10 +6,13 @@ import Vuelidate from 'vuelidate'
 import axios from 'axios'
 import BootstrapVue from 'bootstrap-vue'
 
+import Datepicker from 'vuejs-datepicker'
+
 
 Vue.use(BootstrapVue)
 Vue.use(Vuelidate)
 Vue.use(axios)
+Vue.use(Datepicker)
 Vue.config.productionTip = false;
 
 new Vue({

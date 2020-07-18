@@ -15,10 +15,27 @@ const routes = [
   {
     path: "/menu",
     name: "Menu",
-    meta: { layout: "main" },
+    meta: { layout: "empty" },
     component: () => import("../views/Menu.vue")
   },
-
+  {
+    path:"/menuform",
+    name:"MenuForm",
+    // meta:{layout: "main"},
+    component:()=>import("../views/MenuForm.vue")
+  },
+  {
+path: "/createform",
+name:"CreateForm",
+// meta:{layout:"main"},
+component: ()=>import("../views/CreateForm.vue")
+  },
+  {
+    path: "/createtable",
+    name:"CreateTablePU2a",
+    // meta:{layout:"main"},
+    component: ()=>import("../views/CreateTablePU2a.vue")
+      },
   {
     path: "/",
     name: "Login",
