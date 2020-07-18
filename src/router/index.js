@@ -27,13 +27,13 @@ const routes = [
   {
 path: "/createform",
 name:"CreateForm",
-// meta:{layout:"main"},
+meta:{layout:"main"},
 component: ()=>import("../views/CreateForm.vue")
   },
   {
     path: "/createtable",
     name:"CreateTablePU2a",
-    // meta:{layout:"main"},
+    meta:{layout:"main"},
     component: ()=>import("../views/CreateTablePU2a.vue")
       },
   {
