@@ -5,46 +5,47 @@
             <div class="form-creator column-50">
                 <div class="row">
                     <input
-                        type="text"
+                        type="date"
                         class="column-50"
                         placeholder="Дата проверки"
-                        v-model="value1"
+                        name="date"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="Место работы"
-                        v-model="value2"
+                        name="workRegion"
                     />
                 </div>
                 <div class="row">
+                    <!-- потом сменить тут на связанные селекты-->
                     <input
-                        type="text"
+                        type="number"
                         class="column-50"
                         placeholder="Фамилия оператора"
-                        v-model="value3"
+                        name="responsibleId"
                     />
                     <input
-                        type="text"
+                        type="number"
                         class="column-50"
                         placeholder="Тип и № дефектоскопа"
-                        v-model="value4"
+                        name="defectoscopeId"
                     />
                 </div>
             </div>
             <div class="form-creator column-50">
                 <div class="row">
                     <input
-                        type="text"
+                        type="datetime-local"
                         class="column-50"
                         placeholder="Время обнаружения"
-                        v-model="value5"
+                        name="detectTime"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="Примечание"
-                        v-model="value6"
+                        name="comments"
                     />
                 </div>
                 <div class="row">
@@ -52,7 +53,7 @@
                         type="text"
                         class="column-100"
                         placeholder="Кому выдано уведомление (ПД, ПДБ)"
-                        v-model="value7"
+                        name="noticeTarget"
                     />
                 </div>
             </div>
@@ -61,26 +62,59 @@
             <div class="form-creator column-33">
                 <p class="form-header">Место, где обнаружен дефектный или остродефектный рельс</p>
                 <div class="row">
-                    <input type="text" class="column-50" placeholder="№ околотка" />
-                    <input type="text" class="column-50" placeholder="№ ПК" />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="№ околотка"
+                        name="subdivisionNumber"
+                    />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="№ ПК"
+                        name="picketNumber"
+                    />
                 </div>
                 <div class="row">
-                    <input type="text" class="column-50" placeholder="№ пути" />
-                    <input type="text" class="column-50" placeholder="№ звена" />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="№ пути"
+                        name="trackNumber"
+                    />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="№ звена"
+                        name="sectionNumber"
+                    />
                 </div>
                 <div class="row">
-                    <input type="text" class="column-100" placeholder="КМ или название станции"/>
+                    <input
+                        type="text"
+                        class="column-100"
+                        placeholder="КМ или название станции"
+                        name="stationOrKm"
+                    />
                 </div>
                 <label> нить:</label>
                 <br />
                 <div class="row">
                     <div class="column-50">
-                        <input type="radio" id="checkbox"/>
+                        <input
+                            type="radio"
+                            id="checkbox-right"
+                            name="slot"
+                        />
                         <!--v-model="checked"> -->
                         <label>Правая</label>
                     </div>
                     <div class="column-50">
-                        <input type="radio" id="checkbox"/>
+                        <input
+                            type="radio"
+                            id="checkbox-left"
+                            name="slot"
+                        />
                         <!--v-model="checked"> -->
                         <label>Левая</label>
                     </div>
@@ -89,22 +123,57 @@
             <div class="form-creator column-33">
                 <p class="form-header">Характеристика рельса</p>
                 <div class="row">
-                    <input type="text" class="column-50" placeholder="марка завода" />
-                    <input type="text" class="column-50" placeholder="тип рельса" />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="марка завода"
+                        name="factoryMark"
+                    />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="тип рельса"
+                        name="railType"
+                    />
                 </div>
                 <div class="row">
-                    <input type="text" class="column-50" placeholder="год прокатки" />
-                    <input type="text" class="column-50" placeholder="длина рельса" />
+                    <input
+                        type="date"
+                        class="column-50"
+                        placeholder="год прокатки"
+                        name="factoryYear"
+                    />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="длина рельса"
+                        name="railLength"
+                    />
                 </div>
             </div>
             <div class="form-creator column-33">
                 <p class="form-header">Характеристика дефекта</p>
                 <div class="row">
-                    <input type="text" class="column-50" placeholder="код дефекта" />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="код дефекта"
+                        name="code"
+                    />
                 </div>
                 <div class="row">
-                    <input type="text" class="column-50" placeholder="глубина, мм" />
-                    <input type="text" class="column-50" placeholder="длина, мм" />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="глубина, мм"
+                        name="deep"
+                    />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="длина, мм"
+                        name="length"
+                    />
                 </div>
             </div>
         </div>
@@ -113,15 +182,40 @@
                 <p class="form-header">Количество проверенных километров путей, стрелочных переводов,
                     сварных стыков, съездов</p>
                 <div class="row">
-                    <input type="text" class="column-50" placeholder="Главных путей, км"/>
-                    <input type="text" class="column-50" placeholder="Съездов, шт"/>
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="Главных путей, км"
+                        name="mainTrack"
+                    />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="Съездов, шт"
+                        name="connectedTrack"
+                    />
                 </div>
                 <div class="row">
-                    <input type="text" class="column-50" placeholder="Приемо-отправочных"/>
-                    <input type="text" class="column-50" placeholder="Сварных стыков, шт"/>
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="Приемо-отправочных"
+                        name="ioTrack"
+                    />
+                    <input
+                        type="text"
+                        class="column-50"
+                        placeholder="Сварных стыков, шт"
+                        name="weldedJoint"
+                    />
                 </div>
                 <div class="row">
-                    <input type="text" class="column-75" placeholder="Стрелочных переводов, шт"/>
+                    <input
+                        type="text"
+                        class="column-75"
+                        placeholder="Стрелочных переводов, шт"
+                        name="arrowTrack"
+                    />
                 </div>
             </div>
         </div>
