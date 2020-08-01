@@ -272,32 +272,32 @@
     data() {
     return {
     dataToSend: {
-    date: "",
-    responsibleId: "",
-    defectoscopeId: "",
-    workRegion: "",
-    mainTrack: "",
-    ioTrack: "",
-    arrowTrack: "",
-    weldedJoint: "",
-    connectedTrack: "",
-    subdivisionNumber: "",
-    trackNumber: "",
-    stationOrKm:"",
-    picketNumber:"",
-    sectionNumber:"",
-    slot:"",
-    factoryMark:"",
-    factoryYear:"",
-    railType:"",
-    railLength:"",
-    code:"",
-    deep:"",
-    length:"",
-    detectTime:"",
-    noticeTarget:"",
-    comments:"",
-}
+        date: "",
+        responsibleId: "",
+        defectoscopeId: "",
+        workRegion: "",
+        mainTrack: "",
+        ioTrack: "",
+        arrowTrack: "",
+        weldedJoint: "",
+        connectedTrack: "",
+        subdivisionNumber: "",
+        trackNumber: "",
+        stationOrKm:"",
+        picketNumber:"",
+        sectionNumber:"",
+        slot:"",
+        factoryMark:"",
+        factoryYear:"",
+        railType:"",
+        railLength:"",
+        code:"",
+        deep:"",
+        length:"",
+        detectTime:"",
+        noticeTarget:"",
+        comments:"",
+    }
 };
 },
     methods: {
@@ -308,7 +308,7 @@
     let json = JSON.stringify(this.dataToSend);
     alert(json);
     axios.post('/api/check/', {
-    body:this.dataToSend
+    body:json
 })
     .then(function (response) {
     console.log(response);
