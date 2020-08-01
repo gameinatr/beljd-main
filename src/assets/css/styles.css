@@ -146,13 +146,21 @@ ul.dropdown {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .form-creator .row:last-child {
     margin-bottom: 0;
 }
 .form-creator input {
     min-width: auto;
+}
+.form-creator label {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.form-creator .form-header {
+    font-weight: bold;
+    text-align: center;
 }
 input[type="radio"] + label{
     margin-left:5px;
@@ -181,8 +189,8 @@ input[type="number"] {
 .column-50 {
     width: 49%;
 }
-.column-50.full{
-    max-width:none;
+.full{
+    max-width:none!important;
 }
 .column-75 {
     width: 74%;

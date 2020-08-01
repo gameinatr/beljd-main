@@ -4,55 +4,67 @@
         <div class="row section flex">
             <div class="form-creator column-50">
                 <div class="row">
-                    <input
-                        type="date"
-                        class="column-50"
-                        placeholder="Дата проверки"
-                        v-model="dataToSend.date"
-                    />
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="Место работы"
-                        v-model="dataToSend.workRegion"
-                    />
+                    <div class="column-50">
+                        <label>Дата проверки</label>
+                        <input
+                            type="date"
+                            class="column-100"
+                            v-model="dataToSend.date"
+                        />
+                    </div>
+                    <div class="column-50">
+                        <label>Место работы</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.workRegion"
+                        />
+                    </div>
                 </div>
                 <div class="row">
                     <!-- потом сменить тут на связанные селекты-->
-                    <input
-                        type="number"
-                        class="column-50 full"
-                        placeholder="Фамилия оператора"
-                        v-model="dataToSend.responsibleId"
-                    />
-                    <input
-                        type="number"
-                        class="column-50 full"
-                        placeholder="Тип и № дефектоскопа"
-                        v-model="dataToSend.defectoscopeId"
-                    />
+                    <div class="column-50">
+                        <label>Фамилия оператора</label>
+                        <input
+                            type="number"
+                            class="column-100 full"
+                            v-model="dataToSend.responsibleId"
+                        />
+                    </div>
+                    <div class="column-50">
+                        <label>Тип и № дефектоскопа</label>
+                        <input
+                            type="number"
+                            class="column-100 full"
+                            v-model="dataToSend.defectoscopeId"
+                        />
+                    </div>
                 </div>
             </div>
             <div class="form-creator column-50">
                 <div class="row">
-                    <input
-                        type="datetime-local"
-                        class="column-50"
-                        placeholder="Время обнаружения"
-                        v-model="dataToSend.detectTime"
-                    />
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="Примечание"
-                        v-model="dataToSend.comments"
-                    />
+                    <div class="column-50">
+                        <label>Время обнаружения</label>
+                        <input
+                            type="datetime-local"
+                            class="column-100"
+                            v-model="dataToSend.detectTime"
+                        />
+                    </div>
+                    <div class="column-50">
+                        <label>Примечание</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.comments"
+                        />
+                    </div>
                 </div>
                 <div class="row">
+                    <label>Кому выдано уведомление (ПД, ПДБ)</label>
                     <input
                         type="text"
                         class="column-100"
-                        placeholder="Кому выдано уведомление (ПД, ПДБ)"
                         v-model="dataToSend.noticeTarget"
                     />
                 </div>
@@ -62,42 +74,50 @@
             <div class="form-creator column-33">
                 <p class="form-header">Место, где обнаружен дефектный или остродефектный рельс</p>
                 <div class="row">
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="№ околотка"
-                        v-model="dataToSend.subdivisionNumber"
-                    />
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="№ ПК"
-                        v-model="dataToSend.picketNumber"
-                    />
+                    <div class="column-50">
+                        <label>Номер околотка</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.subdivisionNumber"
+                        />
+                    </div>
+                    <div class="column-50">
+                        <label>Номер ПК</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.picketNumber"
+                        />
+                    </div>
                 </div>
                 <div class="row">
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="№ пути"
-                        v-model="dataToSend.trackNumber"
-                    />
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="№ звена"
-                        v-model="dataToSend.sectionNumber"
-                    />
+                    <div class="column-50">
+                        <label>Номер пути</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.trackNumber"
+                        />
+                    </div>
+                    <div class="column-50">
+                        <label>Номер звена</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.sectionNumber"
+                        />
+                    </div>
                 </div>
                 <div class="row">
+                    <label>Км или название станции</label>
                     <input
                         type="text"
                         class="column-100"
-                        placeholder="КМ или название станции"
                         v-model="dataToSend.stationOrKm"
                     />
                 </div>
-                <label> нить:</label>
+                <span>Нить:</span>
                 <br />
                 <div class="row">
                     <div class="column-50">
@@ -123,100 +143,115 @@
                 </div>
             </div>
             <div class="form-creator column-33">
-                <p class="form-header">Характеристика рельса</p>
-                <div class="row">
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="марка завода"
-                        v-model="dataToSend.factoryMark"
-                    />
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="тип рельса"
-                        v-model="dataToSend.railType"
-                    />
+                <div class="row column-100">
+                    <p class="form-header">Характеристика рельса</p>
+                    <div class="row">
+                        <div class="column-50">
+                            <label>Марка завода</label>
+                            <input
+                                type="text"
+                                class="column-100"
+                                v-model="dataToSend.factoryMark"
+                            />
+                        </div>
+                        <div class="column-50">
+                            <label>Тип рельса</label>
+                            <input
+                                type="text"
+                                class="column-100"
+                                v-model="dataToSend.railType"
+                            />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column-50">
+                            <label>Год прокатки</label>
+                            <input
+                                type="date"
+                                class="column-100"
+                                placeholder=""
+                                v-model="dataToSend.factoryYear"
+                            />
+                        </div>
+                        <div class="column-50">
+                            <label>Длина рельса</label>
+                            <input
+                                type="text"
+                                class="column-100"
+                                v-model="dataToSend.railLength"
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <input
-                        type="date"
-                        class="column-50"
-                        placeholder="год прокатки"
-                        v-model="dataToSend.factoryYear"
-                    />
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="длина рельса"
-                        v-model="dataToSend.railLength"
-                    />
+                <div class="row column-100">
+                    <p class="form-header">Характеристика дефекта</p>
+                    <div class="row">
+                        <label> Код дефекта</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.code"
+                        />
+                    </div>
+                    <div class="row">
+                        <label>Глубина, мм</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.deep"
+                        />
+                    </div>
+                    <div class="row">
+                        <label>Длина, мм</label>
+                        <input
+                            type="text"
+                            class="column-100"
+                            v-model="dataToSend.length"
+                        />
+                    </div>
                 </div>
             </div>
-            <div class="form-creator column-33">
-                <p class="form-header">Характеристика дефекта</p>
-                <div class="row">
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="код дефекта"
-                        v-model="dataToSend.code"
-                    />
-                </div>
-                <div class="row">
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="глубина, мм"
-                        v-model="dataToSend.deep"
-                    />
-                    <input
-                        type="text"
-                        class="column-50"
-                        placeholder="длина, мм"
-                        v-model="dataToSend.length"
-                    />
-                </div>
-            </div>
-        </div>
-        <div class="row section flex">
             <div class="form-creator column-33">
                 <p class="form-header">Количество проверенных километров путей, стрелочных переводов,
                     сварных стыков, съездов</p>
                 <div class="row">
+                    <label>Главных путей, км</label>
                     <input
                         type="text"
-                        class="column-50"
-                        placeholder="Главных путей, км"
+                        class="column-100"
                         v-model="dataToSend.mainTrack"
                     />
+                </div>
+                <div class="row">
+                    <label>Съездов, шт</label>
                     <input
                         type="text"
-                        class="column-50"
-                        placeholder="Съездов, шт"
+                        class="column-100"
                         v-model="dataToSend.connectedTrack"
                     />
                 </div>
                 <div class="row">
+                    <label>Стрелочных переводов, шт</label>
                     <input
                         type="text"
-                        class="column-50"
-                        placeholder="Приемо-отправочных"
-                        v-model="dataToSend.ioTrack"
+                        class="column-100"
+                        v-model="dataToSend.arrowTrack"
                     />
+                </div>
+                <div class="row">
+                    <label>Сварных стыков, шт</label>
                     <input
                         type="text"
-                        class="column-50"
-                        placeholder="Сварных стыков, шт"
+                        class="column-100"
                         v-model="dataToSend.weldedJoint"
                     />
                 </div>
                 <div class="row">
+                    <label>Приемо-отправочных</label>
                     <input
                         type="text"
-                        class="column-75"
-                        placeholder="Стрелочных переводов, шт"
-                        v-model="dataToSend.arrowTrack"
+                        class="column-100"
+                        v-model="dataToSend.ioTrack"
                     />
                 </div>
             </div>
