@@ -31,6 +31,12 @@ meta:{layout:"main"},
 component: ()=>import("../views/CreateForm.vue")
   },
   {
+    path: "/createpu27",
+    name: "CreatePU27",
+    meta: { layout: "main" },
+    component: () => import("../views/CreatePU27.vue")
+  },
+  {
     path: "/createtable",
     name:"CreateTablePU2a",
     meta:{layout:"main"},
