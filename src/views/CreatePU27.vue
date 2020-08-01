@@ -8,28 +8,28 @@
                         type="date"
                         class="column-50"
                         placeholder="Дата проверки"
-                        name="date"
+                        v-model="dataToSend.date"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="Место работы"
-                        name="workRegion"
+                        v-model="dataToSend.workRegion"
                     />
                 </div>
                 <div class="row">
                     <!-- потом сменить тут на связанные селекты-->
                     <input
                         type="number"
-                        class="column-50"
+                        class="column-50 full"
                         placeholder="Фамилия оператора"
-                        name="responsibleId"
+                        v-model="dataToSend.responsibleId"
                     />
                     <input
                         type="number"
-                        class="column-50"
+                        class="column-50 full"
                         placeholder="Тип и № дефектоскопа"
-                        name="defectoscopeId"
+                        v-model="dataToSend.defectoscopeId"
                     />
                 </div>
             </div>
@@ -39,13 +39,13 @@
                         type="datetime-local"
                         class="column-50"
                         placeholder="Время обнаружения"
-                        name="detectTime"
+                        v-model="dataToSend.detectTime"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="Примечание"
-                        name="comments"
+                        v-model="dataToSend.comments"
                     />
                 </div>
                 <div class="row">
@@ -53,7 +53,7 @@
                         type="text"
                         class="column-100"
                         placeholder="Кому выдано уведомление (ПД, ПДБ)"
-                        name="noticeTarget"
+                        v-model="dataToSend.noticeTarget"
                     />
                 </div>
             </div>
@@ -66,13 +66,13 @@
                         type="text"
                         class="column-50"
                         placeholder="№ околотка"
-                        name="subdivisionNumber"
+                        v-model="dataToSend.subdivisionNumber"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="№ ПК"
-                        name="picketNumber"
+                        v-model="dataToSend.picketNumber"
                     />
                 </div>
                 <div class="row">
@@ -80,13 +80,13 @@
                         type="text"
                         class="column-50"
                         placeholder="№ пути"
-                        name="trackNumber"
+                        v-model="dataToSend.trackNumber"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="№ звена"
-                        name="sectionNumber"
+                        v-model="dataToSend.sectionNumber"
                     />
                 </div>
                 <div class="row">
@@ -94,7 +94,7 @@
                         type="text"
                         class="column-100"
                         placeholder="КМ или название станции"
-                        name="stationOrKm"
+                        v-model="dataToSend.stationOrKm"
                     />
                 </div>
                 <label> нить:</label>
@@ -104,18 +104,20 @@
                         <input
                             type="radio"
                             id="checkbox-right"
-                            name="slot"
+                            value="right"
+                            v-model="dataToSend.slot"
                         />
-                        <!--v-model="checked"> -->
+                        <!--v-model="dataToSend.checked"> -->
                         <label>Правая</label>
                     </div>
                     <div class="column-50">
                         <input
                             type="radio"
                             id="checkbox-left"
-                            name="slot"
+                            value="left"
+                            v-model="dataToSend.slot"
                         />
-                        <!--v-model="checked"> -->
+                        <!--v-model="dataToSend.checked"> -->
                         <label>Левая</label>
                     </div>
                 </div>
@@ -127,13 +129,13 @@
                         type="text"
                         class="column-50"
                         placeholder="марка завода"
-                        name="factoryMark"
+                        v-model="dataToSend.factoryMark"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="тип рельса"
-                        name="railType"
+                        v-model="dataToSend.railType"
                     />
                 </div>
                 <div class="row">
@@ -141,13 +143,13 @@
                         type="date"
                         class="column-50"
                         placeholder="год прокатки"
-                        name="factoryYear"
+                        v-model="dataToSend.factoryYear"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="длина рельса"
-                        name="railLength"
+                        v-model="dataToSend.railLength"
                     />
                 </div>
             </div>
@@ -158,7 +160,7 @@
                         type="text"
                         class="column-50"
                         placeholder="код дефекта"
-                        name="code"
+                        v-model="dataToSend.code"
                     />
                 </div>
                 <div class="row">
@@ -166,13 +168,13 @@
                         type="text"
                         class="column-50"
                         placeholder="глубина, мм"
-                        name="deep"
+                        v-model="dataToSend.deep"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="длина, мм"
-                        name="length"
+                        v-model="dataToSend.length"
                     />
                 </div>
             </div>
@@ -186,13 +188,13 @@
                         type="text"
                         class="column-50"
                         placeholder="Главных путей, км"
-                        name="mainTrack"
+                        v-model="dataToSend.mainTrack"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="Съездов, шт"
-                        name="connectedTrack"
+                        v-model="dataToSend.connectedTrack"
                     />
                 </div>
                 <div class="row">
@@ -200,13 +202,13 @@
                         type="text"
                         class="column-50"
                         placeholder="Приемо-отправочных"
-                        name="ioTrack"
+                        v-model="dataToSend.ioTrack"
                     />
                     <input
                         type="text"
                         class="column-50"
                         placeholder="Сварных стыков, шт"
-                        name="weldedJoint"
+                        v-model="dataToSend.weldedJoint"
                     />
                 </div>
                 <div class="row">
@@ -214,32 +216,71 @@
                         type="text"
                         class="column-75"
                         placeholder="Стрелочных переводов, шт"
-                        name="arrowTrack"
+                        v-model="dataToSend.arrowTrack"
                     />
                 </div>
             </div>
         </div>
         <router-link to="/createtablePU27"> <p>go to table</p></router-link>
         <div class="button-block">
-            <button @click="alertSimpleInput1">Сохранить</button>
+            <button @click="sendForm">Сохранить</button>
         <button>Отмена</button>
     </div>
 </div>
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
     name: "createForm",
     data() {
     return {
-    value1: "",
-    value2: "",
-    value3: "",
+    dataToSend: {
+    date: "",
+    responsibleId: "",
+    defectoscopeId: "",
+    workRegion: "",
+    mainTrack: "",
+    ioTrack: "",
+    arrowTrack: "",
+    weldedJoint: "",
+    connectedTrack: "",
+    subdivisionNumber: "",
+    trackNumber: "",
+    stationOrKm:"",
+    picketNumber:"",
+    sectionNumber:"",
+    slot:"",
+    factoryMark:"",
+    factoryYear:"",
+    railType:"",
+    railLength:"",
+    code:"",
+    deep:"",
+    length:"",
+    detectTime:"",
+    noticeTarget:"",
+    comments:"",
+}
 };
 },
     methods: {
     alertSimpleInput1() {
     alert(this.value1 + this.value2 + this.value3);
+},
+    sendForm(){
+    let json = JSON.stringify(this.dataToSend);
+    alert(json);
+    axios.post('/api/check/', {
+    body:this.dataToSend
+})
+    .then(function (response) {
+    console.log(response);
+})
+    .catch(function (error) {
+    console.log(error);
+});
 },
 },
 };

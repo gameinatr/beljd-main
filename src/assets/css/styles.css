@@ -181,6 +181,9 @@ input[type="number"] {
 .column-50 {
     width: 49%;
 }
+.column-50.full{
+    max-width:none;
+}
 .column-75 {
     width: 74%;
 }
